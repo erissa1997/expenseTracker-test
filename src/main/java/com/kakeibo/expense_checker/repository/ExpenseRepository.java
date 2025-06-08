@@ -1,8 +1,9 @@
-package com.example.expense_checker.repository;
+package com.kakeibo.expense_checker.repository;
 
-import com.example.expense_checker.enums.ExpenseCategory;
-import com.example.expense_checker.model.Expense;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.kakeibo.expense_checker.enums.ExpenseCategory;
+import com.kakeibo.expense_checker.model.Expense;
 
 import java.time.LocalDate;
 import java.util.List;

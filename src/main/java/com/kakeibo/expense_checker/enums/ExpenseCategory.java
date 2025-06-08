@@ -1,4 +1,4 @@
-package com.example.expense_checker.enums;
+package com.kakeibo.expense_checker.enums;
 
 public enum ExpenseCategory {
     UTILITY,

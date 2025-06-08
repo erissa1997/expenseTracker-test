@@ -1,7 +1,5 @@
-package com.example.expense_checker.model;
+package com.kakeibo.expense_checker.model;
 
-import com.example.expense_checker.enums.ExpenseCategory;
-import com.example.expense_checker.enums.PaymentType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -10,6 +8,9 @@ import lombok.Data;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Set;
+
+import com.kakeibo.expense_checker.enums.ExpenseCategory;
+import com.kakeibo.expense_checker.enums.PaymentType;
 
 @Data
 @Entity
