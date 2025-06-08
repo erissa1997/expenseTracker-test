@@ -21,7 +21,7 @@ public class Expense {
     private Long id;
 
     @NotNull
-    private LocalDate date;
+    private LocalDate transactionDate;
 
     @NotNull
     private String merchant;
@@ -29,6 +29,9 @@ public class Expense {
     @NotNull
     @Positive
     private BigDecimal amount;
+
+    @NotNull
+    private LocalDate paymentDate;
 
     @NotNull
     @Enumerated(EnumType.STRING)
@@ -39,6 +42,18 @@ public class Expense {
     @CollectionTable(name = "expense_categories", joinColumns = @JoinColumn(name = "expense_id"))
     @Column(name = "category")
     private Set<@NotNull ExpenseCategory> categories;
+ 
+    protected Expense() {}
 
-    private String eventName;
+    public Expense(
+        LocalDate transactionDate, 
+        String merchant, 
+        BigDecimal amount, 
+        LocalDate paymentDate) {
+        this.transactionDate = transactionDate;
+        this.merchant = merchant;
+        this.amount = amount;
+        this.paymentDate = paymentDate;
+        //TODO: this.categories = categories; TODO;Change category from Enum to Entity
+    }
 }
