@@ -2,21 +2,13 @@ package com.kakeibo.expense_checker.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.kakeibo.expense_checker.dao.PostMonthlyExpenseCsvDao;
 import com.kakeibo.expense_checker.dto.PostMonthlyExpenseCsv.ExpenseCsvDto;
 import com.kakeibo.expense_checker.request.PostMonthyExpenseCsvRequest;
 
+@Service
 public class PostMonthlyExpenseCsvService {
-
-
-    @Autowired
-    private final PostMonthlyExpenseCsvDao dao;
-
-    public PostMonthlyExpenseCsvService(PostMonthlyExpenseCsvDao dao) {
-        this.dao = dao;
-    }
 
     /**
      * 
@@ -34,7 +26,7 @@ public class PostMonthlyExpenseCsvService {
         //validate body(data)
         List<ExpenseCsvDto> insertList = List.of();
         try {
-            dao.insert(insertList);
+            
         } catch (Exception e) {
             // TODO: exception handling
         }
